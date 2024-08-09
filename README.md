@@ -1,36 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Arcade Head-to-Head
 
-## Getting Started
+A simple Next.js application to allow users to compete head-to-head in Hack Club Arcade.
 
-First, run the development server:
+This application is meant to provide motivation for those who would like a friendly competition with their peers.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Try it out @ [https://arcade-h2h.vercel.app](https://arcade-h2h.vercel.app). All you need is both user's arcade API key, which you can obtain by running `/api` in the Slack.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Keep in mind that the Hack Hour API only allows 10 requests per minute, so if it is taking an unusually long time to display results, the site is probably under heavier load and you will have to wait and try again in a few moments.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Enjoy :)
