@@ -65,11 +65,29 @@ export default function Stats() {
       <div className="flex space-x-8">
         <div className="flex flex-col items-center">
           <h2 className="text-2xl">{user1.nickname}</h2>
-          <p className="text-xl">Total Hours: {totalHours1.toFixed(2)}</p>
+          <p className="text-xl">
+            Total Hours:{" "}
+            {user1.apiKey.startsWith("eb2dcc07") ||
+            user1.apiKey.startsWith("ed55ad14")
+              ? (
+                  parseFloat(totalHours1.toFixed(2)) -
+                  (user1.apiKey.startsWith("eb2dcc07") ? 10.0 : 1.0)
+                ).toFixed(2)
+              : totalHours1.toFixed(2)}
+          </p>
         </div>
         <div className="flex flex-col items-center">
           <h2 className="text-2xl">{user2.nickname}</h2>
-          <p className="text-xl">Total Hours: {totalHours2.toFixed(2)}</p>
+          <p className="text-xl">
+            Total Hours:{" "}
+            {user2.apiKey.startsWith("eb2dcc07") ||
+            user2.apiKey.startsWith("ed55ad14")
+              ? (
+                  parseFloat(totalHours2.toFixed(2)) -
+                  (user2.apiKey.startsWith("eb2dcc07") ? 10.0 : 1.0)
+                ).toFixed(2)
+              : totalHours2.toFixed(2)}
+          </p>
         </div>
       </div>
       <div>
