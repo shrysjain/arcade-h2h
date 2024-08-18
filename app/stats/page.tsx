@@ -56,8 +56,21 @@ export default function Stats() {
       </div>
     );
 
-  const totalHours1 = data1.total / 60;
-  const totalHours2 = data2.total / 60;
+  let totalHours1 = data1.total / 60;
+  let totalHours2 = data2.total / 60;
+
+  if (user1.apiKey.startsWith("eb2dcc07")) {
+    totalHours1 -= 10.0;
+  }
+  if (user2.apiKey.startsWith("eb2dcc07")) {
+    totalHours2 -= 10.0;
+  }
+  if (user1.apiKey.startsWith("ed55ad14")) {
+    totalHours1 -= 1.0;
+  }
+  if (user2.apiKey.startsWith("ed55ad14")) {
+    totalHours2 -= 1.0;
+  }
 
   return (
     <div className="flex flex-col items-center justify-center h-screen space-y-8">
@@ -65,29 +78,11 @@ export default function Stats() {
       <div className="flex space-x-8">
         <div className="flex flex-col items-center">
           <h2 className="text-2xl">{user1.nickname}</h2>
-          <p className="text-xl">
-            Total Hours:{" "}
-            {user1.apiKey.startsWith("eb2dcc07") ||
-            user1.apiKey.startsWith("ed55ad14")
-              ? (
-                  parseFloat(totalHours1.toFixed(2)) -
-                  (user1.apiKey.startsWith("eb2dcc07") ? 10.0 : 1.0)
-                ).toFixed(2)
-              : totalHours1.toFixed(2)}
-          </p>
+          <p className="text-xl">Total Hours: {totalHours1.toFixed(2)}</p>
         </div>
         <div className="flex flex-col items-center">
           <h2 className="text-2xl">{user2.nickname}</h2>
-          <p className="text-xl">
-            Total Hours:{" "}
-            {user2.apiKey.startsWith("eb2dcc07") ||
-            user2.apiKey.startsWith("ed55ad14")
-              ? (
-                  parseFloat(totalHours2.toFixed(2)) -
-                  (user2.apiKey.startsWith("eb2dcc07") ? 10.0 : 1.0)
-                ).toFixed(2)
-              : totalHours2.toFixed(2)}
-          </p>
+          <p className="text-xl">Total Hours: {totalHours2.toFixed(2)}</p>
         </div>
       </div>
       <div>
