@@ -60,10 +60,10 @@ export default function Stats() {
   let totalHours2 = data2.total / 60;
 
   if (user1.apiKey.startsWith("eb2dcc07")) {
-    totalHours1 -= 10.0;
+    totalHours1 -= 9.0;
   }
   if (user2.apiKey.startsWith("eb2dcc07")) {
-    totalHours2 -= 10.0;
+    totalHours2 -= 9.0;
   }
   if (user1.apiKey.startsWith("ed55ad14")) {
     totalHours1 -= 1.0;
